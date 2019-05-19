@@ -1,0 +1,15 @@
+<div id="texto_show_conteudo" class="skinny_wrapper wrapper_padding">
+  <header>
+    <h2><%= @texto.titulo %></h2>
+    <hr>
+  </header>
+
+  <div id="conteudo">
+    <h1><%= @texto.conteudo %></h1>
+  </div>
+
+  <%= link_to "Edite", edit_texto_path(@texto) %>
+  <%= link_to "Delete", texto_path(@texto), method: :delete, data: { confirm: "Tem certeza que você quer deletar essa matéria?"} %>
+
+  <hr>
+  <hr>
