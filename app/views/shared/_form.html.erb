@@ -1,0 +1,25 @@
+<%= form_for @texto do |f| %>
+  <% if @texto.errors.any? %>
+    <h2><%= pluralize(@texto.errors.count, "error") %> previna que esse texto salve: </h2>
+    <ul>
+      <% @texto.errors.full_messages.each do |msg|%>
+        <li><%= msg %></li>
+      <% end %>
+    <ul>
+  <% end %>
+
+  <%= f.label :titulo, "Escreva seu título aqui!" %><br>
+  <%= f.text_field :titulo%>
+
+  <br>
+  <br>
+
+  <%= f.label :conteudo, "Agora a escreva sua matéria!" %><br>
+  <%= f.text_area :conteudo%>
+
+  <br>
+  <br>
+
+  <%= f.submit%>
+
+<%end%>
